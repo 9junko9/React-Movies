@@ -1,10 +1,13 @@
+@use "../settings"; // Import de settings avec le namespace "settings"
+
 .header {
   h1 {
     font-size: 3.3rem;
-    text-shadow: 2px 3px 0px $color-1;
+    text-shadow: 2px 3px 0px settings.$color-1; // Utilisation de la variable via le namespace "settings"
     text-align: center;
     letter-spacing: 2px;
   }
+
   nav {
     position: absolute;
     top: 16px;
@@ -16,7 +19,7 @@
 
       a {
         text-decoration: none;
-        color: $white;
+        color: settings.$white; // Utilisation de la variable "white"
         border-radius: 10px;
         width: 102px;
         text-align: center;
@@ -24,17 +27,19 @@
 
         &:visited {
           text-decoration: none;
-          color: $white;
+          color: settings.$white; // Utilisation de la variable "white"
         }
-        &:hover {
-          background: $black;
-        }
-      }
-      a.nav-active {
-        background: $color-1;
 
         &:hover {
-          background: $black;
+          background: settings.$black; // Utilisation de la variable "black"
+        }
+      }
+
+      a.nav-active {
+        background: settings.$color-1; // Utilisation de la variable "color-1"
+
+        &:hover {
+          background: settings.$black; // Utilisation de la variable "black"
         }
       }
     }

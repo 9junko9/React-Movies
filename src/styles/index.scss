@@ -1,6 +1,9 @@
-@import "./settings";
-@import "./pages/home";
-@import "./pages/userList";
-@import "./components/header";
-@import "./components/form";
-@import "./components/card";
+@use "./settings"; // Import de settings avec le namespace "settings"
+@use "./pages/home";
+@use "./pages/userList";
+@use "./components/header";
+@use "./components/form";
+@use "./components/card";
+
+// Applique le mixin global-styles de settings
+@include settings.global-styles;
